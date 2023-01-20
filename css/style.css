@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*disable selection*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+NP+Hmong:wght@700&display=swap');
+
+img {
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.map_wrapper > svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110%;
+    height: 100vh;
+    padding-left: 22%;
+}
+
+.map_wrapper > .chair {
+    position: absolute;
+    width: 82.2vw;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.map_wrapper > .icons {
+    position: absolute;
+    top: 35%;
+    right: -35%;
+    transition: all 2s;
+    z-index: 100;
+}
+
+.map_wrapper > .icons > .icon1 > svg {
+    width: 4vw;
+    height: 5vh;
+    margin: 0 0.5vw;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    transition: all 500ms;
+}
+
+.map_wrapper > .icons > .icon1 > svg:hover {
+    fill: rgb(174, 0, 255);
+    border-bottom: 1px solid rgb(174, 0, 255);
+}
+
+.map_wrapper > .icons > .icon2 {
+    padding-top: 10vh;
+}
+
+.map_wrapper > .icons > .icon2 > a > svg {
+    width: 2vw;
+    height: 3vh;
+    margin: 0 0.7vw;
+    cursor: pointer;
+    color: black;
+    transition: all 500ms;
+    border-bottom: 1px solid black;
+}
+
+.map_wrapper > .icons > .icon2 > a > svg:hover {
+    color: rgb(174, 0, 255);
+    border-bottom: 1px solid rgb(174, 0, 255);
+}
+
+.wardrobe {
+    cursor: pointer;
+    fill: transparent;
+    filter: drop-shadow(-30px 50px 20px rgb(0 0 0 / 0.9));
+}
+
+.frame {
+    position: absolute;
+    width: 45vw;
+    height: 55vh;
+    margin-right: 8vh;
+    background-color: transparent;
+    top: 50%;
+    right: -50%;
+    border-radius: 30px;
+    transform: translateY(-50%);
+    background-color: rgb(174, 0, 255);
+    transition: all 2s;
+}
+
+.frame > .main-picture {
+    width: 30%;
+    height: 50%;
+    border-radius: 30px 0 0 0;
+}
+
+.main-photo-div {
+    position: absolute;
+    top: -40%;
+    left: 30%;
+    width: 35vh;
+    height: 40vh;
+    z-index: 200;
+    transition: all 2s;
+}
+
+.main-photo-div-after {
+    top: 15%;
+}
+
+.map_wrapper > .main-photo-div > .main-photo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 500ms;
+}
+
+.frame > .marka-div {
+    width: 20%;
+    height: 35%;
+}
+
+.frame > .marka-div > .marka {
+    width: 12vh;
+    height: 8vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 25px 15px 40px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 25px 15px 40px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 25px 15px 40px 5px rgba(0,0,0,0.75);
+    transition: all ease-in-out 1s;
+}
+
+.frame > .static {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    width: 20%;
+    height: 15%;
+}
+
+.frame > .static > div {
+    margin: 10px 5px;
+    width: 15px;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+}
+
+.frame > .static > .s1 {
+    height: 30px;
+}
+
+.frame > .static > .s2 {
+    height: 40px;
+}
+
+.frame > .static > .s3 {
+    height: 35px;
+}
+
+.frame > .static > .s4 {
+    height: 50px;
+}
+
+.frame2 {
+    position: absolute;
+    display: flex;
+    width: 40vw;
+    height: 55vh;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    right: -40%;
+    border-radius: 30px;
+    transform: translateY(-50%);
+    transition: all 2s;
+}
+
+.frame2 > .div1 {
+    width: 60%;
+    height: 100%;
+    border-radius: 30px 0 0 30px;
+}
+
+.div1 > .title {
+    border-radius: 30px 30px 0 0;
+    width: 40vw;
+    height: 40%;
+}
+
+.div1 > .title > .title-div1 {
+    width: 85%;
+    padding-left: 5%;
+    margin-left: 10%;
+}
+
+.div1 > .title > .title-div2 {
+    width: 25%;
+    margin-left: 10%;
+}
+
+.div1 > .title > .title-div1 > .clothes-name {
+    font-size: 40px;
+    font-family: 'Noto Serif NP Hmong', serif;
+    font-weight: 900;
+    transition: all 1s;
+}
+
+.div1 > .title > .title-div1 > .clothes-description {
+    padding-right: 15%;
+}
+
+.div1 > .small-photos {
+    border-radius: 0 0 0 30px;
+    width: 40vw;
+    height: 60%;
+}
+
+
+.div1 > .small-photos > .small-photos-div1 {
+    width: 30vw;
+    height: 100%;
+}
+
+
+.div1 > .small-photos > .small-photos-div2 {
+    width: 10vw;
+    height: 100%;
+}
+
+.div1 > .small-photos > div > div {
+    width: 100%;
+    height: 100%;
+}
+
+.div1 > .small-photos > div > div > div {
+    width: 90%;
+    height: 95%;
+}
+
+.space1 {
+    margin-left: 15%;
+}
+
+.space2 {
+    margin-right: 15%;
+}
+
+.div1 > .small-photos > div > div > div > img {
+    width: 20vh;
+    height: 15vh;
+    padding: 5px 0;
+    border-radius: 20px
+}
+
+.frame3 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    width: 6vw;
+    height: 55vh;
+    top: 50%;
+    right: -10%;
+    transition: all 2s;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+
+.frame3 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame3 > div > img {
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.frame3 > div > img:hover {
+    background-color: rgb(93, 0, 255);
+}
+
+.frame-display {
+    right: 20%;
+}
+
+.frame-display3 {
+    right: 75%;
+}
+  
